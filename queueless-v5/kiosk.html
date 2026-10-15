@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campus TV – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head>
+<body class="tv">
+<header class="tvh"><a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a><div class="tvt"><b id="clock">--:--</b><span id="dt"></span></div></header>
+<main><h1 class="tvtitle">NOW SERVING</h1><div class="tvgrid" id="grid"></div></main>
+<footer class="tvf"><span>Skip the Line. Save Your Time.</span><a href="index.html" style="opacity:.7">← Exit display</a></footer>
+<script src="js/api.js"></script><script src="js/ui.js"></script>
+<script>
+let prev={};
+async function draw(){
+  const b=await API.publicQueue(); const cells=[];
+  b.forEach(s=>s.counters.forEach(c=>cells.push({s,c})));
+  document.getElementById('grid').innerHTML=cells.map(({s,c})=>{
+    const changed=c.serving&&prev[c.id]!==c.serving;
+    return `<div class="tvc ${c.serving?'on':''} ${changed?'flash':''}"><small>${esc(c.name)} · ${esc(s.name)}</small><div class="n">${c.status!=='Active'?'CLOSED':(c.serving||'—')}</div><span>${c.serving?'Please proceed to the counter':'Counter free'}</span><em>Next: ${esc(s.waiting[0]||'—')} · ${s.waiting.length} waiting</em></div>`}).join('');
+  cells.forEach(({c})=>prev[c.id]=c.serving);
+}
+function tick(){const d=new Date();document.getElementById('clock').textContent=d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});document.getElementById('dt').textContent=d.toLocaleDateString([],{weekday:'long',day:'numeric',month:'long'})}
+tick();setInterval(tick,1000);draw();setInterval(draw,2500);window.addEventListener('storage',draw);
+</script></body></html>

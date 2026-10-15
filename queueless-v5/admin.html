@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Dashboard – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<div class="app">
+  <aside class="side" id="side">
+    <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+    <button class="item on" data-view="dash" data-icon="home">Dashboard</button>
+    <button class="item" data-view="tokens" data-icon="ticket">Token Management</button>
+    <button class="item" data-view="counters" data-icon="users">Counters</button>
+    <button class="item" data-view="services" data-icon="settings">Services</button>
+    <button class="item" data-view="history" data-icon="list">Token History</button>
+    <button class="item" data-view="reports" data-icon="bar">Reports</button>
+    <button class="item" data-view="analytics" data-icon="activity">Analytics</button>
+    <button class="item" data-view="search" data-icon="search">Search</button>
+    <div class="sp"></div>
+    <div class="who"><b id="aname">…</b><span>Administrator</span></div>
+    <button class="item" id="logout" data-icon="logout">Logout</button>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main">
+    <div class="topbar"><div style="display:flex;gap:12px;align-items:center"><button class="menu-btn" id="menu" aria-label="Open menu" data-icon="menu" data-size="22"></button><div><h1 id="title">Dashboard</h1><p id="date"></p></div></div>
+      <div style="display:flex;gap:8px"><button class="icon-btn" data-theme-toggle></button><button class="btn btn-primary btn-sm" id="scanBtn" data-icon="ticket">Scan Token</button><a class="btn btn-light btn-sm" href="kiosk.html" target="_blank" data-icon="tv">Campus TV</a><button class="btn btn-light btn-sm" id="refresh" data-icon="refresh">Refresh</button></div></div>
+
+    <section class="view on" id="v-dash" style="padding:0">
+      <div class="stats" id="astats"><div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+      <h2 class="t">Queue by counter <span style="font-size:.8rem;font-weight:500;color:var(--muted)">Call next / complete / skip</span></h2><div class="ctr-grid" id="ctrBoard"></div>
+      <div class="two-col" style="margin-top:24px"><div class="card"><h3 style="margin-bottom:14px">Tokens by service</h3><div class="bars" id="bars"></div></div>
+        <div class="card"><h3 style="margin-bottom:10px">Recent token activity</h3><div id="recent"></div></div></div>
+    </section>
+    <section class="view" id="v-tokens" style="padding:0">
+      <div class="tools"><div class="inp" style="max-width:260px;flex:1"><span data-icon="search"></span><input id="q" placeholder="Search token or student"></div>
+        <select class="plain" id="fs" style="max-width:170px"><option value="active">Active (waiting + serving)</option><option value="">All</option><option>WAITING</option><option>CALLING</option></select>
+        <select class="plain" id="callCtr" style="max-width:200px"></select><button class="btn btn-primary btn-sm" id="callNext" data-icon="play">Call Next Token</button></div>
+      <div class="tw"><table><thead><tr><th>Token</th><th>Service</th><th>Counter</th><th>Status</th><th>Action</th></tr></thead><tbody id="tt"></tbody></table></div>
+    </section>
+    <section class="view" id="v-counters" style="padding:0">
+      <form class="card formrow" id="cf"><div class="field"><label>New counter name</label><input class="plain" id="cname" placeholder="Counter 6"></div><div class="field"><label>Service</label><select class="plain" id="csvc"></select></div><button class="btn btn-primary btn-sm" type="submit" data-icon="plus">Add counter</button></form>
+      <div class="tw" style="margin-top:16px"><table><thead><tr><th>Counter</th><th>Service</th><th>Serving</th><th>Status</th><th>Action</th></tr></thead><tbody id="ctb"></tbody></table></div>
+    </section>
+    <section class="view" id="v-services" style="padding:0">
+      <form class="card formrow" id="sf"><div class="field"><label>New service</label><input class="plain" id="sname" placeholder="e.g. Hostel Office"></div><div class="field"><label>Description</label><input class="plain" id="sdesc"></div><div class="field"><label>Default time (min)</label><input class="plain" id="savg" type="number" min="1" max="60" value="3" style="width:110px"></div><button class="btn btn-primary btn-sm" type="submit" data-icon="plus">Add service</button></form>
+      <p style="color:var(--muted);font-size:.86rem;margin:12px 0">The default time is used only until a service has 3 completed records; then the real average is used.</p>
+      <div class="tw"><table><thead><tr><th>Service</th><th>Default (min)</th><th>Real average</th><th>Records</th><th>Status</th><th>Action</th></tr></thead><tbody id="stb"></tbody></table></div>
+    </section>
+    <section class="view" id="v-history" style="padding:0">
+      <div class="tools"><div class="inp" style="max-width:260px;flex:1"><span data-icon="search"></span><input id="hq" placeholder="Search history"></div>
+        <select class="plain" id="hs" style="max-width:170px"><option value="">All statuses</option><option>COMPLETED</option><option>SKIPPED</option><option>CANCELLED</option><option>WAITING</option><option>CALLING</option></select></div>
+      <div class="tw"><table><thead><tr><th>Token</th><th>Student</th><th>Service</th><th>Created</th><th>Status</th></tr></thead><tbody id="ht"></tbody></table></div>
+    </section>
+    <section class="view" id="v-analytics" style="padding:0">
+      <div class="stats" id="anStats"></div>
+      <div class="two-col"><div class="card"><h3>Tokens by hour</h3><div class="cols" id="hourCols"></div></div><div class="card"><h3 style="margin-bottom:14px">Token status</h3><div class="bars" id="anStatus"></div></div></div>
+      <div class="two-col" style="margin-top:18px"><div class="card"><h3 style="margin-bottom:12px">Service performance</h3><div class="tw" style="border:0"><table style="min-width:0"><thead><tr><th>Service</th><th>Tokens</th><th>Avg time</th></tr></thead><tbody id="anSvc"></tbody></table></div></div>
+        <div class="card"><h3 style="margin-bottom:14px">Student ratings <span class="star-txt" id="anRate"></span></h3><div class="bars" id="anDist"></div><div id="anFb" style="margin-top:14px"></div></div></div>
+    </section>
+    <section class="view" id="v-search" style="padding:0">
+      <div class="card"><div class="formrow"><div class="field" style="flex:2;min-width:180px"><label>Token / student name / student ID</label><input class="plain" id="sq" placeholder="e.g. F105, Rajesh, 2024CS108"></div>
+        <div class="field"><label>Status</label><select class="plain" id="ss"><option value="">Any</option><option>WAITING</option><option>CALLING</option><option>COMPLETED</option><option>SKIPPED</option><option>CANCELLED</option></select></div>
+        <div class="field"><label>Service</label><select class="plain" id="ssv"><option value="">Any</option></select></div>
+        <div class="field"><label>From</label><input class="plain" type="date" id="sfrom"></div><div class="field"><label>To</label><input class="plain" type="date" id="sto"></div>
+        <button class="btn btn-light btn-sm" id="sclear">Clear</button><button class="btn btn-primary btn-sm" id="scsv" data-icon="file">Export CSV</button></div></div>
+      <p style="margin:12px 2px;color:var(--muted);font-size:.88rem" id="scount"></p>
+      <div class="tw"><table><thead><tr><th>Token</th><th>Student</th><th>Service</th><th>Created</th><th>Service time</th><th>Rating</th><th>Status</th></tr></thead><tbody id="sres"></tbody></table></div>
+    </section>
+    <section class="view" id="v-reports" style="padding:0">
+      <div class="two-col"><div class="card"><h3 style="margin-bottom:14px">Tokens by status</h3><div class="bars" id="sbars"></div></div><div class="card"><h3 style="margin-bottom:14px">Tokens by service</h3><div class="bars" id="bars2"></div></div></div>
+      <h2 class="t">Service-time records</h2>
+      <div class="tw"><table><thead><tr><th>Token</th><th>Service</th><th>Counter</th><th>Started</th><th>Completed</th><th>Duration</th></tr></thead><tbody id="rt"></tbody></table></div>
+      <p style="margin-top:16px"><button class="btn btn-light btn-sm" id="reset" data-icon="refresh">Reset demo data</button></p>
+    </section>
+  </main>
+</div>
+<script src="js/qrcode.js"></script><script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/admin.js"></script>
+</body></html>

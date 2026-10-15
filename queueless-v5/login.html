@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<main class="auth">
+  <aside class="auth-art">
+    <div class="ph"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=70" alt="Students together on a college campus" data-fail-img="assets/img/campus.svg"></div>
+    <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+    <h2>Better Services. Happier Students.</h2>
+    <p>QueueLess makes college services faster and more organized with digital tokens and live queue updates.</p>
+    <div class="benefits">
+      <div><span data-icon="zap"></span> Get a token in seconds</div>
+      <div><span data-icon="activity"></span> Track your position live</div>
+      <div><span data-icon="clock"></span> Know your waiting time</div>
+    </div>
+  </aside>
+  <section class="auth-form"><button class="icon-btn" data-theme-toggle style="position:absolute;top:18px;right:18px"></button><div class="form-card">
+    <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+    <h1>Welcome Back!</h1><p class="sub">Log in to manage your queue effortlessly.</p>
+    <div class="form-err" id="ferr" role="alert"></div>
+    <form id="f" novalidate>
+      <div class="field" id="fe"><label for="email">Email address</label><div class="inp"><span data-icon="mail"></span><input id="email" type="email" placeholder="you@college.edu" autocomplete="email"></div><div class="emsg"></div></div>
+      <div class="field" id="fp"><label for="pw">Password</label><div class="inp"><span data-icon="lock"></span><input id="pw" type="password" placeholder="Enter your password" autocomplete="current-password"><button type="button" class="pw-toggle" data-target="pw" aria-label="Show password" data-icon="eye"></button></div><div class="emsg"></div></div>
+      <div class="row"><label><input type="checkbox" id="rem"> Remember me</label><a href="#" id="forgot">Forgot password?</a></div>
+      <button class="btn btn-primary btn-block" id="go" type="submit">Login</button>
+    </form>
+    <p class="alt">Don't have an account? <a href="register.html">Create Account</a></p>
+    <div class="demo-box"><b>Demo accounts (development only):</b> <span style="display:inline-flex;gap:6px;margin-left:6px"><button type="button" class="btn btn-light btn-sm" data-demo="student">Demo Student</button><button type="button" class="btn btn-light btn-sm" data-demo="admin">Demo Admin</button></span><br>Student: student@queueless.com / student123<br>Admin: admin@queueless.com / admin123</div>
+  </div></section>
+</main>
+<script src="js/api.js"></script><script src="js/ui.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const setErr=(box,m)=>{box.classList.toggle('err',!!m);box.querySelector('.emsg').textContent=m||''};
+document.querySelectorAll('[data-demo]').forEach(b=>b.onclick=()=>{const a=b.dataset.demo==='admin';$('email').value=a?'admin@queueless.com':'student@queueless.com';$('pw').value=a?'admin123':'student123';$('go').click()});
+$('forgot').onclick=e=>{e.preventDefault();toast('Password reset needs an email server. Ask the admin or use a demo account.','info')};
+API.me().then(u=>{location.href=u.role==='admin'?'admin.html':'student.html'}).catch(()=>{});
+$('f').addEventListener('submit',async e=>{
+  e.preventDefault();$('ferr').classList.remove('show');
+  const email=$('email').value.trim(),pw=$('pw').value;let bad=false;
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setErr($('fe'),'Enter a valid email address.');bad=true}else setErr($('fe'),'');
+  if(!pw){setErr($('fp'),'Password is required.');bad=true}else setErr($('fp'),'');
+  if(bad)return;
+  setLoading($('go'),true,'Signing in…');
+  try{const u=await API.login(email,pw,$('rem').checked);toast('Welcome back, '+u.name.split(' ')[0]+'!','ok');setTimeout(()=>location.href=u.role==='admin'?'admin.html':'student.html',500)}
+  catch(err){setLoading($('go'),false);$('ferr').textContent=err.message;$('ferr').classList.add('show')}
+});
+</script></body></html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Queue – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<header class="nav"><div class="container">
+  <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+  <div class="nav-cta"><button class="icon-btn" data-theme-toggle></button><a href="kiosk.html" class="btn btn-light btn-sm" data-icon="tv">Campus TV</a><a href="login.html" class="btn btn-primary btn-sm">Login</a></div>
+</div></header>
+<main class="container" style="padding:40px 22px 70px">
+  <div class="sec-head" style="margin-bottom:30px"><span class="eyebrow">Public live board</span><h2>Live Queue Status</h2><p>See what is being served right now. No login needed. Updates automatically.</p></div>
+  <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:22px"><span class="livedot"></span> Last updated <b id="upd">…</b></p>
+  <div class="svc-grid" id="board" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))"><div class="sk" style="height:260px"></div><div class="sk" style="height:260px"></div></div>
+</main>
+<script src="js/api.js"></script><script src="js/ui.js"></script>
+<script>
+async function draw(){
+  const b=await API.publicQueue();
+  document.getElementById('board').innerHTML=b.map(s=>`<article class="card">
+    <h3 style="display:flex;gap:8px;align-items:center;margin-bottom:12px">${icon(s.icon,20)} ${esc(s.name)}</h3>
+    ${s.counters.map(c=>`<div class="lrow"><span>${esc(c.name)} ${c.status!=='Active'?'<span class="badge mute">Closed</span>':''}</span><b class="${c.serving?'srv':''}">${c.serving||'—'}</b></div>`).join('')||'<p>No counters.</p>'}
+    <p style="margin:12px 0 6px;font-size:.84rem;color:var(--muted)">Waiting (${s.waiting.length}) · new token wait ≈ <b>${s.estimatedMinutes} min</b>${s.avgIsEstimate?' <span class="badge warn">estimate</span>':''}</p>
+    <div class="chips">${s.waiting.slice(0,8).map(n=>`<span class="chip">${n}</span>`).join('')||'<span class="chip now">No one waiting</span>'}${s.waiting.length>8?`<span class="chip">+${s.waiting.length-8}</span>`:''}</div></article>`).join('');
+  document.getElementById('upd').textContent=fmtTime(new Date().toISOString());
+}
+draw();setInterval(draw,4000);window.addEventListener('storage',draw);
+</script></body></html>

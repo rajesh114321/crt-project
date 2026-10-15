@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create Account – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<main class="auth">
+  <aside class="auth-art">
+    <div class="ph"><img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1400&q=70" alt="Modern university campus walkway" data-fail-img="assets/img/campus.svg"></div>
+    <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+    <h2>Join QueueLess today.</h2>
+    <p>Create a student account and never stand in a long college queue again.</p>
+    <div class="benefits">
+      <div><span data-icon="ticket"></span> Digital tokens for every service</div>
+      <div><span data-icon="shield"></span> Passwords are hashed, never stored as plain text</div>
+      <div><span data-icon="phone"></span> Works on mobile, tablet and desktop</div>
+    </div>
+  </aside>
+  <section class="auth-form"><button class="icon-btn" data-theme-toggle style="position:absolute;top:18px;right:18px"></button><div class="form-card" style="max-width:520px">
+    <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+    <h1>Create Account</h1><p class="sub">Fill in your details to get started.</p>
+    <div class="form-err" id="ferr" role="alert"></div>
+    <form id="f" novalidate>
+      <div class="field" id="g_name"><label for="name">Full name</label><div class="inp"><span data-icon="user"></span><input id="name" placeholder="Your full name" autocomplete="name"></div><div class="emsg"></div></div>
+      <div class="two">
+        <div class="field" id="g_sid"><label for="sid">Student ID / Roll no.</label><div class="inp"><span data-icon="id"></span><input id="sid" placeholder="2024CS108"></div><div class="emsg"></div></div>
+        <div class="field" id="g_phone"><label for="phone">Phone number</label><div class="inp"><span data-icon="phone"></span><input id="phone" type="tel" placeholder="9876543210" autocomplete="tel"></div><div class="emsg"></div></div>
+      </div>
+      <div class="field" id="g_email"><label for="email">Email address</label><div class="inp"><span data-icon="mail"></span><input id="email" type="email" placeholder="you@college.edu" autocomplete="email"></div><div class="emsg"></div></div>
+      <div class="two">
+        <div class="field" id="g_pw"><label for="pw">Password</label><div class="inp"><span data-icon="lock"></span><input id="pw" type="password" placeholder="Min. 6 characters" autocomplete="new-password"><button type="button" class="pw-toggle" data-target="pw" aria-label="Show password" data-icon="eye"></button></div><div class="emsg"></div></div>
+        <div class="field" id="g_cf"><label for="cf">Confirm password</label><div class="inp"><span data-icon="lock"></span><input id="cf" type="password" placeholder="Repeat password" autocomplete="new-password"><button type="button" class="pw-toggle" data-target="cf" aria-label="Show password" data-icon="eye"></button></div><div class="emsg"></div></div>
+      </div>
+      <button class="btn btn-primary btn-block" id="go" type="submit">Create Account</button>
+    </form>
+    <p class="alt">Already have an account? <a href="login.html">Login</a></p>
+  </div></section>
+</main>
+<script src="js/api.js"></script><script src="js/ui.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const setErr=(k,m)=>{const b=$('g_'+k);b.classList.toggle('err',!!m);b.querySelector('.emsg').textContent=m||'';return !!m};
+$('f').addEventListener('submit',async e=>{
+  e.preventDefault();$('ferr').classList.remove('show');
+  const d={name:$('name').value,studentId:$('sid').value,phone:$('phone').value,email:$('email').value,password:$('pw').value,confirm:$('cf').value};
+  let bad=false;
+  bad|=setErr('name',d.name.trim().length<2?'Enter your full name.':'');
+  bad|=setErr('sid',!d.studentId.trim()?'Student ID is required.':'');
+  bad|=setErr('phone',!/^[0-9+\-\s]{10,15}$/.test(d.phone.trim())?'Enter a valid phone number.':'');
+  bad|=setErr('email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())?'Enter a valid email address.':'');
+  bad|=setErr('pw',d.password.length<6?'Use at least 6 characters.':'');
+  bad|=setErr('cf',d.confirm!==d.password?'Passwords do not match.':'');
+  if(bad)return;
+  setLoading($('go'),true,'Creating account…');
+  try{await API.register(d);await API.login(d.email,d.password,false);toast('Account created! Redirecting…','ok');setTimeout(()=>location.href='student.html',700)}
+  catch(err){setLoading($('go'),false);$('ferr').textContent=err.message;$('ferr').classList.add('show')}
+});
+</script></body></html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Dashboard – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<div class="app">
+  <aside class="side" id="side">
+    <a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+    <button class="item on" data-view="dash" data-icon="home">Dashboard</button>
+    <button class="item" data-view="gen" data-icon="ticket">Generate Token</button>
+    <button class="item" data-view="tokens" data-icon="list">My Tokens</button>
+    <button class="item" data-view="queue" data-icon="activity">Queue Status</button>
+    <button class="item" data-view="profile" data-icon="user">Profile</button>
+    <a class="item" href="live.html" target="_blank" data-icon="activity">Public Live Board</a>
+    <div class="sp"></div>
+    <div class="who"><b id="sname">…</b><span id="sid"></span></div>
+    <button class="item" id="logout" data-icon="logout">Logout</button>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main">
+    <div class="topbar">
+      <div style="display:flex;gap:12px;align-items:center"><button class="menu-btn" id="menu" aria-label="Open menu" data-icon="menu" data-size="22"></button>
+        <div><h1 id="title">Welcome</h1><p id="date"></p></div></div>
+      <div style="display:flex;gap:8px;align-items:center;position:relative"><button class="icon-btn" data-theme-toggle></button>
+        <button class="icon-btn" id="bell" aria-label="Notifications" data-icon="bell" data-size="18"><span class="dot" id="bellN" style="display:none">0</span></button>
+        <div class="notes" id="notes"><h4>Notifications</h4><div id="noteList"></div></div>
+        <button class="btn btn-light btn-sm" id="smsBtn" data-icon="phone">SMS Simulator</button>
+        <button class="btn btn-light btn-sm" id="refresh" data-icon="refresh">Refresh Queue Status</button></div>
+    </div>
+
+    <section class="view on" id="v-dash" style="padding:0">
+      <div class="stats three" id="dstats"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+      <div id="activeBox"><div class="sk" style="height:200px"></div></div>
+      <h2 class="t">Available services</h2><div class="svc-grid" id="svcA"><div class="sk" style="height:250px"></div><div class="sk" style="height:250px"></div></div>
+    </section>
+    <section class="view" id="v-gen" style="padding:0">
+      <h2 class="t" style="margin-top:0">Choose a service to get your token</h2><div class="svc-grid" id="svcB"></div>
+    </section>
+    <section class="view" id="v-tokens" style="padding:0">
+      <div class="tw"><table><thead><tr><th>Token</th><th>Service</th><th>Date</th><th>Status</th><th></th></tr></thead><tbody id="tbody"></tbody></table></div>
+    </section>
+    <section class="view" id="v-queue" style="padding:0">
+      <div id="myQ"></div><h2 class="t">Live counters</h2><div class="two-col" id="board"></div>
+    </section>
+    <section class="view" id="v-profile" style="padding:0">
+      <div class="card" style="max-width:520px"><h3 style="margin-bottom:14px">Your profile</h3>
+        <form id="pf" novalidate>
+          <div class="field"><label>Full name</label><input class="plain" id="pname"></div>
+          <div class="field"><label>Student ID</label><input class="plain" id="psid" disabled></div>
+          <div class="field"><label>Email</label><input class="plain" id="pemail" disabled></div>
+          <div class="field"><label>Phone</label><input class="plain" id="pphone"></div>
+          <button class="btn btn-primary" id="psave" type="submit">Save changes</button>
+        </form></div>
+    </section>
+  </main>
+</div>
+<script src="js/qrcode.js"></script><script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/student.js"></script>
+</body></html>

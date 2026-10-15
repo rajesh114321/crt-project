@@ -1,0 +1,1351 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "name": "Rajesh Guguloth",
+      "studentId": "ADMIN-01",
+      "email": "24r21a6620@mlrit.ac.in",
+      "phone": "+91 8121301736",
+      "role": "admin",
+      "passwordHash": "$2a$10$YQLlZGTzV3oHxqihU5X.pes3d5OuFrSWU0UBR1xpiHuz8L8PVLOSO",
+      "plainDemoPassword": null,
+      "department": "Administration",
+      "secondaryEmail": "admin@queueless.com",
+      "passwordUpdatedAt": "2026-10-15T01:52:41.725Z"
+    },
+    {
+      "id": "usr_admin_2",
+      "name": "Prof. Sunita Rao",
+      "studentId": "ADMIN-02",
+      "email": "sunita.admin@queueless.com",
+      "phone": "+91 98765 43211",
+      "role": "admin",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "admin123",
+      "department": "Accounts"
+    },
+    {
+      "id": "usr_student_1",
+      "name": "Rajesh",
+      "studentId": "24R21A0647",
+      "email": "rajesh@gmail.com",
+      "secondaryEmail": "student@queueless.com",
+      "phone": "+91 98765 43210",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Computer Science & Engineering"
+    },
+    {
+      "id": "usr_student_2",
+      "name": "Ananya Iyer",
+      "studentId": "2024EC214",
+      "email": "ananya.iyer@queueless.com",
+      "phone": "+91 92345 67890",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Electronics & Communication"
+    },
+    {
+      "id": "usr_student_3",
+      "name": "Vikram Malhotra",
+      "studentId": "2023ME045",
+      "email": "vikram.m@queueless.com",
+      "phone": "+91 93456 78901",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Mechanical Engineering"
+    },
+    {
+      "id": "usr_student_4",
+      "name": "Pooja Hegde",
+      "studentId": "2024IT312",
+      "email": "pooja.h@queueless.com",
+      "phone": "+91 94567 89012",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Information Technology"
+    },
+    {
+      "id": "usr_student_5",
+      "name": "Karan Johar Patel",
+      "studentId": "2023CV089",
+      "email": "karan.p@queueless.com",
+      "phone": "+91 95678 90123",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Civil Engineering"
+    },
+    {
+      "id": "usr_student_6",
+      "name": "Meera Sen",
+      "studentId": "2024AI019",
+      "email": "meera.sen@queueless.com",
+      "phone": "+91 96789 01234",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Artificial Intelligence & Data Science"
+    },
+    {
+      "id": "usr_student_7",
+      "name": "Aditya Verma",
+      "studentId": "2023EE156",
+      "email": "aditya.v@queueless.com",
+      "phone": "+91 97890 12345",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Electrical Engineering"
+    },
+    {
+      "id": "usr_student_8",
+      "name": "Sneha Mukherjee",
+      "studentId": "2024BT067",
+      "email": "sneha.m@queueless.com",
+      "phone": "+91 98901 23456",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Biotechnology"
+    },
+    {
+      "id": "usr_student_9",
+      "name": "Rohan Deshmukh",
+      "studentId": "2023CS098",
+      "email": "rohan.d@queueless.com",
+      "phone": "+91 99012 34567",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Computer Science & Engineering"
+    },
+    {
+      "id": "usr_student_10",
+      "name": "Divya Nair",
+      "studentId": "2024CH042",
+      "email": "divya.n@queueless.com",
+      "phone": "+91 90123 45678",
+      "role": "student",
+      "passwordHash": "$2a$10$wT8Kz54P9eH2J6vA7V1f2uQ2N/9uWv4wX7M0e9fA2m5l3b2n1o0e2",
+      "plainDemoPassword": "student123",
+      "department": "Chemical Engineering"
+    },
+    {
+      "id": "usr_1792026980595_ev8j",
+      "name": "Prof. Ananya Sen",
+      "email": "newadmin_1792026980449@queueless.com",
+      "phone": "+91 98765 44950",
+      "studentId": "ADM-0595",
+      "passwordHash": "$2a$10$4Rb/D2t8EEbyPTlqvCoBAeE66GB4qlF.ALZVG3gIX7iElIJwXv712",
+      "role": "admin",
+      "department": "Administration",
+      "status": "Active",
+      "phoneVerified": true,
+      "createdAt": "2026-10-15T01:16:20.595Z"
+    },
+    {
+      "id": "usr_1792027163343_077q",
+      "name": "Rajesh Guguloth",
+      "email": "24r21a6620@mlrit.ac.in",
+      "phone": "+91 8121301736",
+      "studentId": "ADM-3343",
+      "passwordHash": "$2a$10$Ov4B9eA6z9WfTR3rX/BEhOuu.zQ2GdPh/YkICAHiG/MnGvX1dTjNy",
+      "role": "admin",
+      "department": "Administration",
+      "status": "Active",
+      "phoneVerified": true,
+      "createdAt": "2026-10-15T01:19:23.343Z",
+      "plainDemoPassword": "admin123"
+    }
+  ],
+  "departments": [
+    {
+      "id": "dept_accounts",
+      "name": "Accounts Section",
+      "code": "F",
+      "location": "Admin Block - 1st Floor, Room 104",
+      "avgServiceTimeMinutes": 3,
+      "description": "Tuition fee payment, fee clearance certificates, scholarship distribution and receipts.",
+      "active": true,
+      "services": [
+        {
+          "id": "srv_fee_pay",
+          "name": "Fee Payment",
+          "code": "F",
+          "estimatedMinutes": 3,
+          "description": "Semester tuition & exam fee settlements"
+        },
+        {
+          "id": "srv_fee_receipt",
+          "name": "Fee Receipt & Clearance",
+          "code": "F",
+          "estimatedMinutes": 2,
+          "description": "Duplicate receipts and no-due verifications"
+        },
+        {
+          "id": "srv_scholarship",
+          "name": "Scholarship Desk",
+          "code": "F",
+          "estimatedMinutes": 4,
+          "description": "State & merit scholarship forms validation"
+        }
+      ]
+    },
+    {
+      "id": "dept_office",
+      "name": "College Office",
+      "code": "O",
+      "location": "Main Building - Ground Floor, Room 008",
+      "avgServiceTimeMinutes": 4,
+      "description": "Student identity cards, bonafide verification, grade transcripts, and admission enquiry.",
+      "active": true,
+      "services": [
+        {
+          "id": "srv_bonafide",
+          "name": "Bonafide Certificate",
+          "code": "O",
+          "estimatedMinutes": 3,
+          "description": "Official college bonafide certificate dispatch"
+        },
+        {
+          "id": "srv_degree_cert",
+          "name": "Degree & Certificates",
+          "code": "O",
+          "estimatedMinutes": 5,
+          "description": "Original certificate collection & attestation"
+        },
+        {
+          "id": "srv_id_card",
+          "name": "ID Card Replacement",
+          "code": "O",
+          "estimatedMinutes": 4,
+          "description": "Lost or damaged RFID smart card re-issuance"
+        },
+        {
+          "id": "srv_general_enquiry",
+          "name": "General Enquiry",
+          "code": "O",
+          "estimatedMinutes": 2,
+          "description": "Administrative circulars and university inquiries"
+        }
+      ]
+    },
+    {
+      "id": "dept_library",
+      "name": "Central Library",
+      "code": "L",
+      "location": "Library Annex - 2nd Floor",
+      "avgServiceTimeMinutes": 2,
+      "description": "Circulation desk, new membership registration, book loans, renewals, and fine clearance.",
+      "active": true,
+      "services": [
+        {
+          "id": "srv_book_issue",
+          "name": "Book Issue",
+          "code": "L",
+          "estimatedMinutes": 2,
+          "description": "Checkout course textbooks and reference material"
+        },
+        {
+          "id": "srv_book_return",
+          "name": "Book Return",
+          "code": "L",
+          "estimatedMinutes": 2,
+          "description": "Return borrowed volumes and fine clearance"
+        },
+        {
+          "id": "srv_lib_membership",
+          "name": "Membership & Renewal",
+          "code": "L",
+          "estimatedMinutes": 3,
+          "description": "Annual library RFID registration"
+        }
+      ]
+    },
+    {
+      "id": "dept_canteen",
+      "name": "Campus Canteen",
+      "code": "C",
+      "location": "Student Center - Ground Floor",
+      "avgServiceTimeMinutes": 2,
+      "description": "Digital food voucher redemption, meal packaging, and counter express pickup.",
+      "active": true,
+      "services": [
+        {
+          "id": "srv_food_order",
+          "name": "Food Order",
+          "code": "C",
+          "estimatedMinutes": 2,
+          "description": "Pre-order lunchtime combo meals and beverages"
+        },
+        {
+          "id": "srv_express_pickup",
+          "name": "Express Pickup",
+          "code": "C",
+          "estimatedMinutes": 1,
+          "description": "Instant pickup counter for pre-paid mobile orders"
+        }
+      ]
+    }
+  ],
+  "counters": [
+    {
+      "id": "counter_1",
+      "counterNumber": 1,
+      "name": "Counter 1 (Office Services)",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "status": "Active",
+      "staffName": "Mr. R. K. Gupta",
+      "currentToken": null
+    },
+    {
+      "id": "counter_2",
+      "counterNumber": 2,
+      "name": "Counter 2 (Accounts & Fees)",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "status": "Active",
+      "staffName": "Mrs. Shobha Sharma",
+      "currentToken": "F-034"
+    },
+    {
+      "id": "counter_3",
+      "counterNumber": 3,
+      "name": "Counter 3 (Library Circulation)",
+      "departmentId": "dept_library",
+      "departmentName": "Central Library",
+      "status": "Active",
+      "staffName": "Mr. Anand Murthy",
+      "currentToken": null
+    },
+    {
+      "id": "counter_4",
+      "counterNumber": 4,
+      "name": "Counter 4 (Canteen Express)",
+      "departmentId": "dept_canteen",
+      "departmentName": "Campus Canteen",
+      "status": "Offline",
+      "staffName": "Chef Raju",
+      "currentToken": null
+    }
+  ],
+  "tokens": [
+    {
+      "id": "tok_f_028",
+      "tokenNumber": "F-028",
+      "userId": "usr_student_3",
+      "studentName": "Vikram Malhotra",
+      "studentId": "2023ME045",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "COMPLETED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:14:50.995Z",
+      "calledAt": "2026-10-08T16:22:50.996Z",
+      "completedAt": "2026-10-08T16:26:50.996Z"
+    },
+    {
+      "id": "tok_f_029",
+      "tokenNumber": "F-029",
+      "userId": "usr_student_4",
+      "studentName": "Pooja Hegde",
+      "studentId": "2024IT312",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Receipt & Clearance",
+      "status": "COMPLETED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:22:50.996Z",
+      "calledAt": "2026-10-08T16:28:50.996Z",
+      "completedAt": "2026-10-08T16:32:50.996Z"
+    },
+    {
+      "id": "tok_f_030",
+      "tokenNumber": "F-030",
+      "userId": "usr_student_5",
+      "studentName": "Karan Johar Patel",
+      "studentId": "2023CV089",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "SKIPPED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:30:50.996Z",
+      "calledAt": "2026-10-08T16:36:50.996Z",
+      "completedAt": null
+    },
+    {
+      "id": "tok_f_031",
+      "tokenNumber": "F-031",
+      "userId": "usr_student_6",
+      "studentName": "Meera Sen",
+      "studentId": "2024AI019",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "SKIPPED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:37:50.996Z",
+      "calledAt": "2026-10-08T16:59:50.996Z",
+      "completedAt": null
+    },
+    {
+      "id": "tok_f_032",
+      "tokenNumber": "F-032",
+      "userId": "usr_student_7",
+      "studentName": "Aditya Verma",
+      "studentId": "2023EE156",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "COMPLETED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:40:50.996Z",
+      "calledAt": "2026-10-14T19:17:40.913Z",
+      "completedAt": "2026-10-14T19:19:14.388Z"
+    },
+    {
+      "id": "tok_f_033",
+      "tokenNumber": "F-033",
+      "userId": "usr_student_8",
+      "studentName": "Sneha Mukherjee",
+      "studentId": "2024BT067",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Scholarship Desk",
+      "status": "COMPLETED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:42:50.996Z",
+      "calledAt": "2026-10-14T19:17:38.575Z",
+      "completedAt": "2026-10-14T19:27:24.404Z"
+    },
+    {
+      "id": "tok_f_034",
+      "tokenNumber": "F-034",
+      "userId": "usr_student_9",
+      "studentName": "Rohan Deshmukh",
+      "studentId": "2023CS098",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "CALLING",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:44:50.996Z",
+      "calledAt": "2026-10-14T19:27:14.860Z",
+      "completedAt": null
+    },
+    {
+      "id": "tok_f_035",
+      "tokenNumber": "F-035",
+      "userId": "usr_student_10",
+      "studentName": "Divya Nair",
+      "studentId": "2024CH042",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "WAITING",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:47:50.996Z",
+      "calledAt": null,
+      "completedAt": null
+    },
+    {
+      "id": "tok_f_036",
+      "tokenNumber": "F-036",
+      "userId": "usr_student_2",
+      "studentName": "Ananya Iyer",
+      "studentId": "2024EC214",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Scholarship Desk",
+      "status": "WAITING",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:52:50.996Z",
+      "calledAt": null,
+      "completedAt": null
+    },
+    {
+      "id": "tok_f_037",
+      "tokenNumber": "F-037",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh Kumar",
+      "studentId": "2024CS108",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "COMPLETED",
+      "counter": 2,
+      "createdAt": "2026-10-08T16:56:50.996Z",
+      "calledAt": null,
+      "completedAt": "2026-10-14T19:18:28.655Z"
+    },
+    {
+      "id": "tok_o_024",
+      "tokenNumber": "O-024",
+      "userId": "usr_student_4",
+      "studentName": "Pooja Hegde",
+      "studentId": "2024IT312",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "Bonafide Certificate",
+      "status": "SKIPPED",
+      "counter": 1,
+      "createdAt": "2026-10-08T16:32:50.996Z",
+      "calledAt": "2026-10-08T17:00:50.996Z",
+      "completedAt": null
+    },
+    {
+      "id": "tok_o_025",
+      "tokenNumber": "O-025",
+      "userId": "usr_student_5",
+      "studentName": "Karan Johar Patel",
+      "studentId": "2023CV089",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "ID Card Replacement",
+      "status": "SKIPPED",
+      "counter": 1,
+      "createdAt": "2026-10-08T16:37:50.996Z",
+      "calledAt": "2026-10-14T18:30:56.537Z",
+      "completedAt": null
+    },
+    {
+      "id": "tok_o_026",
+      "tokenNumber": "O-026",
+      "userId": "usr_student_7",
+      "studentName": "Aditya Verma",
+      "studentId": "2023EE156",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "Degree & Certificates",
+      "status": "COMPLETED",
+      "counter": 1,
+      "createdAt": "2026-10-08T16:42:50.996Z",
+      "calledAt": "2026-10-14T19:17:26.843Z",
+      "completedAt": "2026-10-14T19:19:08.314Z"
+    },
+    {
+      "id": "tok_l_015",
+      "tokenNumber": "L-015",
+      "userId": "usr_student_8",
+      "studentName": "Sneha Mukherjee",
+      "studentId": "2024BT067",
+      "departmentId": "dept_library",
+      "departmentName": "Central Library",
+      "service": "Book Issue",
+      "status": "COMPLETED",
+      "counter": 3,
+      "createdAt": "2026-10-08T16:47:50.996Z",
+      "calledAt": "2026-10-08T17:01:50.996Z",
+      "completedAt": "2026-10-14T19:19:16.828Z"
+    },
+    {
+      "id": "tok_l_016",
+      "tokenNumber": "L-016",
+      "userId": "usr_student_9",
+      "studentName": "Rohan Deshmukh",
+      "studentId": "2023CS098",
+      "departmentId": "dept_library",
+      "departmentName": "Central Library",
+      "service": "Book Return",
+      "status": "COMPLETED",
+      "counter": 3,
+      "createdAt": "2026-10-08T16:52:50.996Z",
+      "calledAt": "2026-10-14T18:31:07.475Z",
+      "completedAt": "2026-10-14T19:19:20.996Z"
+    },
+    {
+      "id": "tok_hist_1",
+      "tokenNumber": "F-012",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh Kumar",
+      "studentId": "2024CS108",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "COMPLETED",
+      "counter": 2,
+      "createdAt": "2026-10-06T10:14:00.000Z",
+      "calledAt": "2026-10-06T10:28:00.000Z",
+      "completedAt": "2026-10-06T10:32:00.000Z"
+    },
+    {
+      "id": "tok_hist_2",
+      "tokenNumber": "L-018",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh Kumar",
+      "studentId": "2024CS108",
+      "departmentId": "dept_library",
+      "departmentName": "Central Library",
+      "service": "Book Issue",
+      "status": "COMPLETED",
+      "counter": 3,
+      "createdAt": "2026-10-05T14:20:00.000Z",
+      "calledAt": "2026-10-05T14:32:00.000Z",
+      "completedAt": "2026-10-05T14:35:00.000Z"
+    },
+    {
+      "id": "tok_hist_3",
+      "tokenNumber": "O-022",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh Kumar",
+      "studentId": "2024CS108",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "Bonafide Certificate",
+      "status": "CANCELLED",
+      "counter": 1,
+      "createdAt": "2026-10-01T11:05:00.000Z",
+      "calledAt": null,
+      "completedAt": null
+    },
+    {
+      "id": "tok_1792001970959_jgsh",
+      "tokenNumber": "F-038",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh Kumar",
+      "studentId": "2024CS108",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "status": "CANCELLED",
+      "counter": 2,
+      "createdAt": "2026-10-14T18:19:30.960Z",
+      "calledAt": null,
+      "completedAt": null
+    },
+    {
+      "id": "tok_1792007957737_ii6l",
+      "tokenNumber": "O-027",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh",
+      "studentId": "24R21A0647",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "Bonafide Certificate",
+      "status": "CANCELLED",
+      "counter": 1,
+      "createdAt": "2026-10-14T19:59:17.737Z",
+      "calledAt": null,
+      "completedAt": null
+    },
+    {
+      "id": "tok_1792008208486_cah9",
+      "tokenNumber": "L-021",
+      "userId": "usr_student_1",
+      "studentName": "Rajesh",
+      "studentId": "24R21A0647",
+      "departmentId": "dept_library",
+      "departmentName": "Central Library",
+      "service": "Book Issue",
+      "status": "WAITING",
+      "counter": 3,
+      "createdAt": "2026-10-14T20:03:28.486Z",
+      "calledAt": null,
+      "completedAt": null
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1792009928368_jm2f",
+      "userId": "usr_student_10",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.368Z"
+    },
+    {
+      "id": "notif_1792009928367_f5tu",
+      "userId": "usr_student_9",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.367Z"
+    },
+    {
+      "id": "notif_1792009928365_76u9",
+      "userId": "usr_student_8",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.365Z"
+    },
+    {
+      "id": "notif_1792009928364_9zwg",
+      "userId": "usr_student_7",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.364Z"
+    },
+    {
+      "id": "notif_1792009928362_68xl",
+      "userId": "usr_student_6",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.362Z"
+    },
+    {
+      "id": "notif_1792009928361_vg9c",
+      "userId": "usr_student_5",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.361Z"
+    },
+    {
+      "id": "notif_1792009928360_id43",
+      "userId": "usr_student_4",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.360Z"
+    },
+    {
+      "id": "notif_1792009928359_f6i2",
+      "userId": "usr_student_3",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.359Z"
+    },
+    {
+      "id": "notif_1792009928358_aiv3",
+      "userId": "usr_student_2",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.358Z"
+    },
+    {
+      "id": "notif_1792009928356_8rtz",
+      "userId": "usr_student_1",
+      "title": "System Verification Broadcast",
+      "message": "All 15 admin pages and live dispatch channels operating normally.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:32:08.356Z"
+    },
+    {
+      "id": "notif_1792008208486_aa45",
+      "userId": "usr_student_1",
+      "title": "Token L-021 Issued",
+      "message": "You joined the queue for Book Issue at Central Library. Your token is L-021.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:03:28.486Z"
+    },
+    {
+      "id": "notif_1792008206997_2fca",
+      "userId": "usr_student_1",
+      "title": "Token Cancelled",
+      "message": "Token O-027 has been successfully cancelled.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T20:03:26.997Z"
+    },
+    {
+      "id": "notif_1792007957737_zqf8",
+      "userId": "usr_student_1",
+      "title": "Token O-027 Issued",
+      "message": "You joined the queue for Bonafide Certificate at College Office. Your token is O-027.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T19:59:17.737Z"
+    },
+    {
+      "id": "notif_1792007957725_3do2",
+      "userId": "usr_student_1",
+      "title": "Token Cancelled",
+      "message": "Token F-038 has been successfully cancelled.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T19:59:17.725Z"
+    },
+    {
+      "id": "notif_1792006044404_7nvn",
+      "userId": "usr_student_8",
+      "title": "Token Completed",
+      "message": "Your token F-033 for Scholarship Desk has been marked completed. Thank you!",
+      "type": "success",
+      "read": false,
+      "createdAt": "2026-10-14T19:27:24.404Z"
+    },
+    {
+      "id": "notif_1792006034862_eqjw",
+      "userId": "usr_student_10",
+      "title": "🔔 Your turn is approaching!",
+      "message": "Token F-035: You are next in line! Currently serving F-034 at Counter 2. Please be ready.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T19:27:14.862Z"
+    },
+    {
+      "id": "notif_1792006034860_o38k",
+      "userId": "usr_student_9",
+      "title": "🔔 Your turn is near!",
+      "message": "Token F-034: Please proceed immediately to Counter 2 for Fee Payment.",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T19:27:14.860Z"
+    },
+    {
+      "id": "notif_1792005560996_84cc",
+      "userId": "usr_student_9",
+      "title": "Token Completed",
+      "message": "Your token L-016 for Book Return has been marked completed. Thank you!",
+      "type": "success",
+      "read": false,
+      "createdAt": "2026-10-14T19:19:20.996Z"
+    },
+    {
+      "id": "notif_1792005556828_2yfe",
+      "userId": "usr_student_8",
+      "title": "Token Completed",
+      "message": "Your token L-015 for Book Issue has been marked completed. Thank you!",
+      "type": "success",
+      "read": false,
+      "createdAt": "2026-10-14T19:19:16.828Z"
+    },
+    {
+      "id": "notif_1792005554388_h9hi",
+      "userId": "usr_student_7",
+      "title": "Token Completed",
+      "message": "Your token F-032 for Fee Payment has been marked completed. Thank you!",
+      "type": "success",
+      "read": false,
+      "createdAt": "2026-10-14T19:19:14.389Z"
+    },
+    {
+      "id": "notif_1792005548314_7ehf",
+      "userId": "usr_student_7",
+      "title": "Token Completed",
+      "message": "Your token O-026 for Degree & Certificates has been marked completed. Thank you!",
+      "type": "success",
+      "read": false,
+      "createdAt": "2026-10-14T19:19:08.314Z"
+    },
+    {
+      "id": "notif_1792005545192_wnz5",
+      "userId": "usr_student_5",
+      "title": "Token Skipped (No-Show)",
+      "message": "Token O-025 was marked skipped as you did not report to Counter 1. Please generate a new token if needed.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T19:19:05.192Z"
+    },
+    {
+      "id": "notif_1792005543766_mx7f",
+      "userId": "usr_student_4",
+      "title": "Token Skipped (No-Show)",
+      "message": "Token O-024 was marked skipped as you did not report to Counter 1. Please generate a new token if needed.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T19:19:03.766Z"
+    },
+    {
+      "id": "notif_1792005508655_ckzt",
+      "userId": "usr_student_1",
+      "title": "Token Completed",
+      "message": "Your token F-037 for Fee Payment has been marked completed. Thank you!",
+      "type": "success",
+      "read": false,
+      "createdAt": "2026-10-14T19:18:28.655Z"
+    },
+    {
+      "id": "notif_1792005460913_0z28",
+      "userId": "usr_student_7",
+      "title": "🔔 Token Recalled!",
+      "message": "Token F-032 is being recalled at Counter 2. Please report now!",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T19:17:40.913Z"
+    },
+    {
+      "id": "notif_1792005458579_qa2n",
+      "userId": "usr_student_9",
+      "title": "🔔 Your turn is approaching!",
+      "message": "Token F-034: You are next in line! Currently serving F-033 at Counter 2. Please be ready.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T19:17:38.579Z"
+    },
+    {
+      "id": "notif_1792005458575_8a9j",
+      "userId": "usr_student_8",
+      "title": "🔔 Your turn is near!",
+      "message": "Token F-033: Please proceed immediately to Counter 2 for Scholarship Desk.",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T19:17:38.575Z"
+    },
+    {
+      "id": "notif_1792005458566_pv09",
+      "userId": "usr_student_6",
+      "title": "Token Skipped (No-Show)",
+      "message": "Token F-031 was marked skipped as you did not report to Counter 2. Please generate a new token if needed.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T19:17:38.566Z"
+    },
+    {
+      "id": "notif_1792005446843_dadi",
+      "userId": "usr_student_7",
+      "title": "🔔 Your turn is near!",
+      "message": "Token O-026: Please proceed immediately to Counter 1 for Degree & Certificates.",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T19:17:26.843Z"
+    },
+    {
+      "id": "notif_1792002667475_6t4d",
+      "userId": "usr_student_9",
+      "title": "🔔 Your turn is near!",
+      "message": "Token L-016: Please proceed immediately to Counter 3 for Book Return.",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T18:31:07.475Z"
+    },
+    {
+      "id": "notif_1792002656539_3cb8",
+      "userId": "usr_student_7",
+      "title": "🔔 Your turn is approaching!",
+      "message": "Token O-026: You are next in line! Currently serving O-025 at Counter 1. Please be ready.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T18:30:56.539Z"
+    },
+    {
+      "id": "notif_1792002656537_4xsp",
+      "userId": "usr_student_5",
+      "title": "🔔 Your turn is near!",
+      "message": "Token O-025: Please proceed immediately to Counter 1 for ID Card Replacement.",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T18:30:56.537Z"
+    },
+    {
+      "id": "notif_1792002647979_yser",
+      "userId": "usr_student_8",
+      "title": "🔔 Your turn is approaching!",
+      "message": "Token F-033: You are next in line! Currently serving F-032 at Counter 2. Please be ready.",
+      "type": "warning",
+      "read": false,
+      "createdAt": "2026-10-14T18:30:47.980Z"
+    },
+    {
+      "id": "notif_1792002647976_4fob",
+      "userId": "usr_student_7",
+      "title": "🔔 Your turn is near!",
+      "message": "Token F-032: Please proceed immediately to Counter 2 for Fee Payment.",
+      "type": "alert",
+      "read": false,
+      "createdAt": "2026-10-14T18:30:47.976Z"
+    },
+    {
+      "id": "notif_1792001970960_u54u",
+      "userId": "usr_student_1",
+      "title": "Token F-038 Issued",
+      "message": "You joined the queue for Fee Payment at Accounts Section. Your token is F-038.",
+      "type": "info",
+      "read": true,
+      "createdAt": "2026-10-14T18:19:30.960Z"
+    },
+    {
+      "id": "notif_1791998956138_c3xo",
+      "userId": "usr_student_1",
+      "title": "Token Cancelled",
+      "message": "Token F-037 has been successfully cancelled.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-14T17:29:16.138Z"
+    },
+    {
+      "id": "notif_1",
+      "userId": "usr_student_1",
+      "title": "Queue Position Update",
+      "message": "You are currently 6 positions away for Token F-037. Est. wait time: 18 mins.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-10-08T16:58:50.997Z"
+    },
+    {
+      "id": "notif_2",
+      "userId": "usr_student_1",
+      "title": "Counter Assignment",
+      "message": "Fee Payment tokens are actively being processed at Counter 2 by Mrs. Shobha Sharma.",
+      "type": "info",
+      "read": true,
+      "createdAt": "2026-10-08T16:56:50.997Z"
+    },
+    {
+      "id": "notif_3",
+      "userId": "usr_student_1",
+      "title": "Previous Token Completed",
+      "message": "Token F-012 (Fee Payment) was successfully completed on 06 Oct 2026.",
+      "type": "success",
+      "read": true,
+      "createdAt": "2026-10-06T10:33:00.000Z"
+    }
+  ],
+  "analytics": {
+    "summary": {
+      "totalTokensToday": 347,
+      "currentlyWaiting": 42,
+      "completed": 281,
+      "skipped": 24,
+      "averageWaitingTimeMinutes": 16,
+      "averageServiceTimeMinutes": 3.4,
+      "peakHours": "11:00 AM – 1:00 PM",
+      "mostBusyDepartment": "Accounts Section"
+    },
+    "dailyVolume": [
+      {
+        "day": "Monday",
+        "count": 320,
+        "completed": 275,
+        "skipped": 25,
+        "avgWait": 18
+      },
+      {
+        "day": "Tuesday",
+        "count": 410,
+        "completed": 350,
+        "skipped": 30,
+        "avgWait": 22
+      },
+      {
+        "day": "Wednesday",
+        "count": 380,
+        "completed": 330,
+        "skipped": 20,
+        "avgWait": 17
+      },
+      {
+        "day": "Thursday",
+        "count": 450,
+        "completed": 395,
+        "skipped": 28,
+        "avgWait": 24
+      },
+      {
+        "day": "Friday",
+        "count": 390,
+        "completed": 345,
+        "skipped": 21,
+        "avgWait": 19
+      }
+    ],
+    "departmentBreakdown": [
+      {
+        "department": "Accounts Section",
+        "count": 145,
+        "percentage": 42,
+        "color": "#4f46e5"
+      },
+      {
+        "department": "College Office",
+        "count": 98,
+        "percentage": 28,
+        "color": "#2563eb"
+      },
+      {
+        "department": "Central Library",
+        "count": 62,
+        "percentage": 18,
+        "color": "#06b6d4"
+      },
+      {
+        "department": "Campus Canteen",
+        "count": 42,
+        "percentage": 12,
+        "color": "#10b981"
+      }
+    ],
+    "hourlyTraffic": [
+      {
+        "hour": "09:00 AM",
+        "tokens": 24
+      },
+      {
+        "hour": "10:00 AM",
+        "tokens": 58
+      },
+      {
+        "hour": "11:00 AM",
+        "tokens": 92
+      },
+      {
+        "hour": "12:00 PM",
+        "tokens": 88
+      },
+      {
+        "hour": "01:00 PM",
+        "tokens": 74
+      },
+      {
+        "hour": "02:00 PM",
+        "tokens": 46
+      },
+      {
+        "hour": "03:00 PM",
+        "tokens": 35
+      },
+      {
+        "hour": "04:00 PM",
+        "tokens": 18
+      }
+    ]
+  },
+  "appointments": [
+    {
+      "id": "apt_1",
+      "studentId": "2024CS108",
+      "studentName": "Rajesh Kumar",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "Degree Verification",
+      "scheduledDate": "2026-10-16",
+      "scheduledTime": "10:30 AM",
+      "status": "SCHEDULED",
+      "notes": "Original marksheet verification & stamp"
+    },
+    {
+      "id": "apt_2",
+      "studentId": "2024EC214",
+      "studentName": "Ananya Iyer",
+      "departmentId": "dept_accounts",
+      "departmentName": "Accounts Section",
+      "service": "Scholarship Disbursal",
+      "scheduledDate": "2026-10-16",
+      "scheduledTime": "11:15 AM",
+      "status": "SCHEDULED",
+      "notes": "State merit scholarship verification"
+    },
+    {
+      "id": "apt_3",
+      "studentId": "2023ME045",
+      "studentName": "Vikram Malhotra",
+      "departmentId": "dept_library",
+      "departmentName": "Central Library",
+      "service": "Research Journal Access",
+      "scheduledDate": "2026-10-15",
+      "scheduledTime": "02:00 PM",
+      "status": "CHECKED_IN",
+      "notes": "IEEE digital library pass issuance"
+    },
+    {
+      "id": "apt_4",
+      "studentId": "2024IT312",
+      "studentName": "Pooja Hegde",
+      "departmentId": "dept_office",
+      "departmentName": "College Office",
+      "service": "Bonafide Certificate",
+      "scheduledDate": "2026-10-14",
+      "scheduledTime": "03:30 PM",
+      "status": "COMPLETED",
+      "notes": "Passport verification bonafide issued"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "fb_1",
+      "tokenNumber": "F-035",
+      "studentName": "Ananya Iyer",
+      "studentId": "2024EC214",
+      "departmentName": "Accounts Section",
+      "service": "Fee Payment",
+      "rating": 5,
+      "comment": "Super fast fee payment processing at Counter 2. Saved over 45 minutes of waiting!",
+      "sentiment": "Positive",
+      "createdAt": "2026-10-14T17:20:00.000Z"
+    },
+    {
+      "id": "fb_2",
+      "tokenNumber": "O-019",
+      "studentName": "Karan Johar Patel",
+      "studentId": "2023CV089",
+      "departmentName": "College Office",
+      "service": "Bonafide Certificate",
+      "rating": 4,
+      "comment": "Very smooth certificate issuing. Staff were polite and prompt.",
+      "sentiment": "Positive",
+      "createdAt": "2026-10-14T15:10:00.000Z"
+    },
+    {
+      "id": "fb_3",
+      "tokenNumber": "L-008",
+      "studentName": "Meera Sen",
+      "studentId": "2024AI019",
+      "departmentName": "Central Library",
+      "service": "Book Issue",
+      "rating": 5,
+      "comment": "Library book renewal was instantaneous with the digital token pass.",
+      "sentiment": "Positive",
+      "createdAt": "2026-10-14T12:45:00.000Z"
+    },
+    {
+      "id": "fb_4",
+      "tokenNumber": "C-011",
+      "studentName": "Aditya Verma",
+      "studentId": "2023EE156",
+      "departmentName": "Campus Canteen",
+      "service": "Food Order",
+      "rating": 4,
+      "comment": "Canteen counter wait time tracking was accurate.",
+      "sentiment": "Positive",
+      "createdAt": "2026-10-14T13:30:00.000Z"
+    }
+  ],
+  "settings": {
+    "queueSettings": {
+      "maxActiveTokensPerStudent": 1,
+      "ticketPrefixAuto": true,
+      "autoCallNext": false,
+      "soundAlertEnabled": true
+    },
+    "laneSettings": {
+      "totalLanes": 4,
+      "lanes": [
+        {
+          "id": "lane_1",
+          "name": "Lane 01",
+          "department": "College Office",
+          "counterNumber": 1,
+          "color": "#2563eb",
+          "status": "Active"
+        },
+        {
+          "id": "lane_2",
+          "name": "Lane 02",
+          "department": "Accounts Section",
+          "counterNumber": 2,
+          "color": "#7c3aed",
+          "status": "Active"
+        },
+        {
+          "id": "lane_3",
+          "name": "Lane 03",
+          "department": "Central Library",
+          "counterNumber": 3,
+          "color": "#059669",
+          "status": "Active"
+        },
+        {
+          "id": "lane_4",
+          "name": "Lane 04",
+          "department": "Campus Canteen",
+          "counterNumber": 4,
+          "color": "#d97706",
+          "status": "Active"
+        }
+      ]
+    },
+    "operatingHours": {
+      "openingTime": "09:00 AM",
+      "closingTime": "05:00 PM",
+      "lunchBreakStart": "01:00 PM",
+      "lunchBreakEnd": "02:00 PM"
+    },
+    "securitySettings": {
+      "otpExpiryMinutes": 5,
+      "maxOtpAttempts": 5,
+      "resendCooldownSeconds": 60,
+      "requireAdmin2FA": true
+    },
+    "themeSettings": {
+      "monitoringTheme": "dark",
+      "colorLegend": {
+        "serving": "#10b981",
+        "waiting": "#f59e0b",
+        "skipped": "#ef4444",
+        "completed": "#3b82f6",
+        "cancelled": "#64748b"
+      }
+    }
+  },
+  "loginLogs": [
+    {
+      "id": "log_1792029161739_jrox",
+      "timestamp": "2026-10-15T01:52:41.739Z",
+      "userId": "usr_admin_1",
+      "email": "24r21a6620@mlrit.ac.in",
+      "role": "admin",
+      "action": "CONTACT_UPDATED",
+      "method": "Phone SMS OTP",
+      "ip": "::1",
+      "status": "Success",
+      "details": "Updated registered phone to +91 8121301736",
+      "userAgent": "Browser"
+    },
+    {
+      "id": "log_1792029161727_7lxt",
+      "timestamp": "2026-10-15T01:52:41.727Z",
+      "userId": "usr_admin_1",
+      "email": "24r21a6620@mlrit.ac.in",
+      "role": "admin",
+      "action": "PASSWORD_CHANGE",
+      "method": "Bcrypt Hash",
+      "ip": "::1",
+      "status": "Success",
+      "details": "Password securely changed with bcrypt 10-round salt",
+      "userAgent": "Browser"
+    },
+    {
+      "id": "log_1792029161466_1pw7",
+      "timestamp": "2026-10-15T01:52:41.466Z",
+      "userId": "usr_admin_1",
+      "email": "24r21a6620@mlrit.ac.in",
+      "role": "admin",
+      "action": "PASSWORD_CHANGE",
+      "method": "Bcrypt Hash",
+      "ip": "::1",
+      "status": "Success",
+      "details": "Password securely changed with bcrypt 10-round salt",
+      "userAgent": "Browser"
+    },
+    {
+      "id": "log_1792029161180_4mcs",
+      "timestamp": "2026-10-15T01:52:41.180Z",
+      "userId": "usr_admin_1",
+      "email": "24r21a6620@mlrit.ac.in",
+      "role": "admin",
+      "action": "2FA_SUCCESS",
+      "method": "Gmail SMTP OTP",
+      "ip": "::1",
+      "status": "Success",
+      "details": "Administrator 2FA verified successfully",
+      "userAgent": "Browser"
+    },
+    {
+      "id": "log_1792029161164_fioy",
+      "timestamp": "2026-10-15T01:52:41.164Z",
+      "userId": "usr_admin_1",
+      "email": "24r21a6620@mlrit.ac.in",
+      "role": "admin",
+      "action": "2FA_CHALLENGE",
+      "method": "Gmail SMTP OTP",
+      "ip": "::1",
+      "status": "Challenged",
+      "details": "Dispatched 6-digit verification code to 2********0@mlrit.ac.in",
+      "userAgent": "Browser"
+    }
+  ]
+}

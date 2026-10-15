@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About the Project – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<header class="nav"><div class="container"><a href="index.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+  <div class="nav-cta"><button class="icon-btn" data-theme-toggle></button><a href="login.html" class="btn btn-light btn-sm">Login</a><a href="register.html" class="btn btn-primary btn-sm">Get Started</a></div></div></header>
+<section class="about-hero"><div class="container"><h1>QueueLess – Smart Digital Token System</h1><p>A college project that replaces physical queues at the college office, fee counter, library and canteen with digital tokens, live tracking and waiting-time estimates.</p></div></section>
+<section><div class="container">
+  <div class="grid2" style="align-items:start">
+    <div class="card pcard"><h3>The problem</h3><ul><li>Students stand in long lines at fee counters and offices.</li><li>No idea how long the wait will be or when it is their turn.</li><li>Crowded corridors and wasted class time.</li></ul></div>
+    <div class="card pcard"><h3>The solution</h3><ul><li>Choose a service and get a digital token in seconds.</li><li>Track position, people ahead and estimated wait live.</li><li>Get notified when you are next and when it is your turn.</li><li>Staff call, complete or skip tokens from an admin dashboard.</li></ul></div>
+  </div>
+  <div class="sec-head" style="margin:56px auto 24px"><span class="eyebrow">Try it</span><h2>Waiting-time calculator</h2><p>The same rule the app uses. Move the sliders.</p></div>
+  <div class="card" style="max-width:560px;margin:0 auto" id="calcBox"></div>
+  <div class="sec-head" style="margin:56px auto 24px"><span class="eyebrow">Features</span><h2>What is included</h2></div>
+  <div class="grid4">
+    <div class="card pcard"><h3>Student</h3><ul><li>Register / login</li><li>Generate token, cancel</li><li>Live position + wait time</li><li>QR Token Pass, receipt</li><li>Ratings, notifications, SMS simulator</li></ul></div>
+    <div class="card pcard"><h3>Admin</h3><ul><li>Call / complete / skip</li><li>Counters and services</li><li>Token history, reports</li><li>Analytics, search, CSV</li><li>Scan token at counter</li></ul></div>
+    <div class="card pcard"><h3>Public</h3><ul><li>Live Queue board</li><li>Campus TV display</li><li>Dark mode</li><li>Responsive layout</li></ul></div>
+    <div class="card pcard"><h3>Built with</h3><ul><li>HTML, CSS, JavaScript</li><li>localStorage as the data store</li><li>qrcode-generator (MIT)</li><li>Custom SVG illustrations</li></ul></div>
+  </div>
+  <div class="card pcard limit" style="margin-top:40px"><h3>Honest limitations</h3><ul><li>This version is frontend-only. Data lives in each browser's localStorage and is not shared between devices.</li><li>Passwords are hashed in the browser, which is demo-grade, not real security. A production version needs a backend and database.</li><li>SMS is simulated – no real messages are sent.</li><li>Waiting time is a simple estimate (people ahead × average service time ÷ counters), not a prediction model.</li></ul></div>
+  <div style="text-align:center;margin-top:40px"><a href="register.html" class="btn btn-primary">Try QueueLess</a> <a href="login.html" class="btn btn-light">Login</a></div>
+</div></section>
+<footer><div class="container"><div class="copy" style="border:0;margin:0">© 2026 QueueLess. College project.</div></div></footer>
+<script src="js/ui.js"></script>
+<script>const b=document.getElementById('calcBox');b.innerHTML=waitCalcHtml({ahead:5,avg:3,counters:1});waitCalcInit(b);</script>
+</body></html>

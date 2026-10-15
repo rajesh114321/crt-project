@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Token Pass – QueueLess</title><link rel="stylesheet" href="css/styles.css"></head><body style="background:var(--bg)">
+<header class="nav noprint"><div class="container"><a href="student.html" class="logo"><span class="logo-q">Q</span><span>Queue<b>Less</b></span></a>
+  <div class="nav-cta"><button class="icon-btn" data-theme-toggle></button><a href="student.html" class="btn btn-light btn-sm">← Dashboard</a></div></div></header>
+<main style="display:grid;place-items:center;padding:36px 16px"><div id="wrap" style="width:100%;max-width:420px"><div class="sk" style="height:420px"></div></div>
+<div class="noprint" style="margin-top:18px;display:flex;gap:10px"><button class="btn btn-primary" id="print" data-icon="printer">Print / Save as PDF</button><button class="btn btn-light" id="rf" data-icon="refresh">Refresh</button></div></main>
+<script src="js/qrcode.js"></script><script src="js/api.js"></script><script src="js/ui.js"></script>
+<script>
+async function draw(){
+  let u;try{u=await API.me()}catch(e){location.href='login.html';return}
+  const list=await API.myTokens();const t=list.find(x=>x.status==='WAITING'||x.status==='CALLING')||list[0];
+  if(!t){document.getElementById('wrap').innerHTML=`<div class="card empty">${icon('ticket',36)}<h3>No token yet</h3><p>Generate a token from your dashboard to see your pass.</p><a class="btn btn-primary btn-sm" href="student.html">Go to dashboard</a></div>`;return}
+  document.getElementById('wrap').innerHTML=`<div class="pass"><div class="ph-top"><span class="logo"><span class="logo-q" style="width:30px;height:30px;font-size:1rem">Q</span><span style="color:#fff">Queue<b style="color:#8FF0FA">Less</b></span></span>${badge(t.status)}</div>
+    <div class="pnum">${esc(t.number)}</div><div class="psvc">${esc(t.serviceName)}</div>
+    <div class="pgrid"><div><small>Student</small><b>${esc(t.studentName)}</b></div><div><small>Student ID</small><b>${esc(u.studentId)}</b></div><div><small>Counter</small><b>${esc(t.counterName)}</b></div><div><small>Issued</small><b>${fmtDate(t.createdAt)} ${fmtTime(t.createdAt)}</b></div>
+    <div><small>People ahead</small><b>${t.status==='WAITING'?t.peopleAhead:'—'}</b></div><div><small>Est. wait</small><b>${t.status==='WAITING'?t.estimatedMinutes+' min':t.status==='CALLING'?'Your turn!':'—'}</b></div></div>
+    <div class="cut"></div><div class="bar-wrap"><div class="qrbox">${qrSvg(tokenCode(t,u.studentId))}</div><small>Show this QR at the counter</small></div></div>`;
+}
+document.getElementById('print').onclick=()=>window.print();document.getElementById('rf').onclick=draw;draw();setInterval(draw,6000);
+</script></body></html>
